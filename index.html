@@ -440,6 +440,55 @@
           <span style="color: red;">Scroll to zoom in and drag to change view.</span>
         </p>
 
+        <div style="
+          margin: 0; 
+          padding: 0; 
+          line-height: 0; 
+          display: grid; 
+          /* 2 columns: 1 'fraction' for video, 2 'fractions' for 3D */
+          grid-template-columns: 1fr 2fr;
+          /* 2 rows, one for each video+3D pair */
+          grid-template-rows: repeat(2, auto); 
+          gap: 3px;
+        ">
+          <!-- Video 1 -->
+          <div class="video-wrapper">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+              <source src="./static/3d/snowy_mountains_rt1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- 3D Viewer 3 -->
+          <div id="viewer5" class="viewer"></div>
+
+          <!-- Video 2 -->
+          <div class="video-wrapper">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+              <source src="./static/3d/snowy_mountains_dvgformer.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- 3D Viewer 2 -->
+          <div id="viewer6" class="viewer"></div>
+
+        </div>
+        <script>
+          create3DViewer(
+            "viewer5",
+            "./static/3d/snowy_mountains_pointcloud.ply",      // path to pointcloud
+            "./static/3d/snowy_mountains_rt1_path.ply",  // path to mesh
+            [-267.742722, -248.496634, 95.270341],    // camera location
+            [-50.672150, -8.423536, 21.478352],    // camera target
+            20
+          );
+
+          create3DViewer(
+            "viewer6",
+            "./static/3d/snowy_mountains_pointcloud.ply",
+            "./static/3d/snowy_mountains_dvgformer_path.ply",
+            [-267.742722, -248.496634, 95.270341],
+            [-50.672150, -8.423536, 21.478352],
+            20
+          );
+        </script>
         <br>
 
 
