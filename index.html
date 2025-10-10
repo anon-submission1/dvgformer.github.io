@@ -329,7 +329,11 @@
             <img src="./latex/figs/demo3dv3/03901_fpv_cliff_5d162e65_return10.00_crashNone_2025-05-10_22-28-16_config.jpg" style="width: 100%; height: auto;" />
           </div>
         </div>
+        <span style="font-size: 0.6em; line-height: 0.6;">
+          Please be advised that the videos are rendered at a lower quality (64 samples in Blender). Since our focus is on <strong>generated camera drone trajectories</strong>, not image quality, we choose this setting for the speed of the rendering.
+        </span>
       </div>
+      
     </div>
   </section>
   <br>
@@ -429,22 +433,6 @@ Camera drones offer unique perspectives and dynamic motions, yet automating thei
 
         <br>
         
-        <!-- contribution -->
-        <h3 class="title is-3">Evaluation and Benchmarking</h3>
-        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
-          <img src="./latex/figs/interactive_eval.png" alt="Interactive evaluation and simulation scenes.">
-          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">.</figcaption> -->
-        </figure>
-
-        <ul>
-          <li><strong>Interactive Evaluation Environment:</strong> different from previoua works that compare against ground-truth motions from existing videos (<span style="color: red;">predicted motions are not reflected</span>), our evaluation environment is interactive, where the camera drone motion directly influences future images.</li>
-          <li><strong>38 Natural Scenes and 7 Real City Scans:</strong> we collected 38 natural scenes from <a href="https://github.com/princeton-vl/infinigen" target="_blank">InfiniGen</a> and 7 real city scans from Google Earth.</li>
-          <li><strong>Metrics:</strong> human preference, crash rate, image-trajectory alignment, and diversity.</li>
-        </ul>
-
-        <br>
-
-
         <!-- method -->
         <h3 class="title is-3">DVGFormer Architecture</h3>
         <figure class="image" style="margin: 0 auto; max-width: 1000px;">
@@ -453,11 +441,46 @@ Camera drones offer unique perspectives and dynamic motions, yet automating thei
         As a minor contribution, we prepare three different DVGFormer models for different prediction settings:
         <ol>
           <li><strong>DVGFormer-A:</strong> predicts the camera trajectory based on the initial image and previous camera poses.</li>
-          <li><strong>DVGFormer-B:</strong> predicts the camera trajectory based on all previous images.</li>
+          <li><strong>DVGFormer-B:</strong> predicts the camera trajectory based on all previous images. <strong>This is our default version.</strong></li>
           <li><strong>DVGFormer-C:</strong> predicts the camera trajectory based on previous images, camera poses, and motions.</li>
         </ol>
 
         <br>
+
+        <!-- contribution -->
+        <h3 class="title is-3">Evaluation and Benchmarking</h3>
+
+        
+        <h5 class="title is-5">Evaluation Environment</h5>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/interactive_eval.png" alt="Interactive evaluation and simulation scenes.">
+          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">.</figcaption> -->
+        </figure>
+
+        <ul>
+          <li><strong>Interactive Evaluation Environment:</strong> different from previoua works that compare against ground-truth motions from existing videos (<span style="color: red;">predicted motions are not reflected</span>), our evaluation environment is interactive, where the camera drone motion directly influences future images.</li>
+          <li><strong>38 Natural Scenes and 7 Real City Scans:</strong> we collected 38 natural scenes from <a href="https://github.com/princeton-vl/infinigen" target="_blank">InfiniGen</a> and 7 real city scans from Google Earth.</li>
+        </ul>
+
+        <br>
+
+        <h5 class="title is-5">Quantitative Results</h5>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/results_table.png" alt="Quantitative results.">
+          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">.</figcaption> -->
+        </figure>
+
+        <ul>
+          <li><strong>CImTr-S:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  a CLIP-score-like metric that measures the alignment between the predicted camera trajectory and the ground-truth camera trajectory using the proposed <strong>CImTr</strong> features (see Fig. 7 in the manuscript).</li>
+          <li><strong>crash:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  the percentage of predicted camera trajectories that lead to crash.</li>
+          <li><strong>perfer.:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  human preference compared to DVGFormer-C.</li>
+          <li><strong>FID<sub>kinetic</sub>:</strong> &nbsp;&nbsp;&nbsp; Frechet Inception Distance using kinetic features (following <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DanceCamera3D_3D_Camera_Movement_Synthesis_with_Music_and_Dance_CVPR_2024_paper.pdf" target="_blank">Wang et al. 2024</a>).</li>
+          <li><strong>FID<sub>CImTr</sub>:</strong> &nbsp;&nbsp;&nbsp;&nbsp;  Frechet Inception Distance using CImTr features.</li>
+          <li><strong>div<sub>CImTr</sub>:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  diversity using CImTr features.</li>
+        </ul>
+
+        <br>
+
 
 
         <!-- results -->
