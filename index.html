@@ -149,7 +149,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Learning Camera Movement Control from Real-World Drone Videos</h1>
+            <h1 class="title is-1 publication-title">Learning to Fly Camera Drones by Watching Internet Videos</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 Anonymous Authors
@@ -184,7 +184,7 @@
         </div>
 
         <!-- teaser -->
-        <h2 class="subsubtitle has-text-centered"> "To record as is, not to create from scratch." </h2>
+        <!-- <h2 class="subsubtitle has-text-centered"> "To record as is, not to create from scratch." </h2> -->
         <div class="video-container"
           style="margin: 0px; padding: 0px; line-height: 0px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px;">
           <!-- real -->
@@ -248,22 +248,284 @@
         </div>
 
         <br>
+      </div>
+    </div>
+  </section>
+  <br>
 
+  
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-1">
+            <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv2/00000_00509_fpv_rome_return10.00_crashNone_2025-04-21_13-44-44_config.txt_2025-10-11_02-18-40_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv2/00509_fpv_rome_return10.00_crashNone_2025-04-21_13-44-44_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-2">
+            <video poster="" id="2" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv2/00000_00204_nonfpv_melbourne_return10.00_crashNone_2025-04-09_08-42-31_config.txt_2025-10-11_02-19-57_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv2/00204_nonfpv_melbourne_return10.00_crashNone_2025-04-09_08-42-31_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-3">
+            <video poster="" id="3" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv2/00000_02801_fpv_canyon_322e7b67_return10.00_crashNone_2025-04-09_09-12-58_config.txt_2025-10-11_02-20-59_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv2/02801_fpv_canyon_322e7b67_return10.00_crashNone_2025-04-09_09-12-58_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-4">
+            <video poster="" id="4" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv2/00000_00601_fpv_sydney_return10.00_crashNone_2025-04-09_08-53-43_config.txt_2025-10-11_02-21-46_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv2/00601_fpv_sydney_return10.00_crashNone_2025-04-09_08-53-43_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-5">
+            <video poster="" id="5" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_00103_fpv_london_return10.00_crashNone_2025-05-05_22-03-17_config.txt_2025-10-11_02-47-19_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/00103_fpv_london_return10.00_crashNone_2025-05-05_22-03-17_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <!-- <div class="item item-6">
+            <video poster="" id="6" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_00605_fpv_sydney_return10.00_crashNone_2025-05-05_22-24-53_config.txt_2025-10-11_02-47-54_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/00605_fpv_sydney_return10.00_crashNone_2025-05-05_22-24-53_config.jpg" style="width: 100%; height: auto;" /> -->
+          <!-- </div> -->
+          <div class="item item-7">
+            <video poster="" id="7" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_00205_fpv_melbourne_return10.00_crashNone_2025-05-05_22-09-12_config.txt_2025-10-11_02-49-03_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/00205_fpv_melbourne_return10.00_crashNone_2025-05-05_22-09-12_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-8">
+            <video poster="" id="8" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_01602_nonfpv_snowy_mountain_11d35d54_return10.00_crashNone_2025-05-05_22-38-53_config.txt_2025-10-11_03-05-03_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/01602_nonfpv_snowy_mountain_11d35d54_return10.00_crashNone_2025-05-05_22-38-53_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-9">
+            <video poster="" id="9" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_01802_fpv_canyon_11d0a033_return10.00_crashNone_2025-05-05_22-40-21_config.txt_2025-10-11_03-05-39_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/01802_fpv_canyon_11d0a033_return10.00_crashNone_2025-05-05_22-40-21_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+          <div class="item item-10">
+            <video poster="" id="10" autoplay controls muted loop playsinline height="100%">
+              <source src="./latex/figs/demo3dv3/00000_03901_fpv_cliff_5d162e65_return10.00_crashNone_2025-05-10_22-28-16_config.txt_2025-10-11_03-15-50_online_plus.mp4"
+                      type="video/mp4">
+            </video>
+            <img src="./latex/figs/demo3dv3/03901_fpv_cliff_5d162e65_return10.00_crashNone_2025-05-10_22-28-16_config.jpg" style="width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+
+        
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-4">Abstract</h2>
+            <h3 class="title is-3">Abstract</h3>
             <div class="content has-text-justified">
               <p>
-                Dynamic camera movement is a primary tool for guiding viewers’ attention and conveying emotion in video. Creating compelling camera movement demands both thoughtful shot planning and smooth camera operation. Existing AI videography methods can generate camera trajectories based on predefined rules, exemplar video clips, or textual prompts; however, they still rely on humans for shot planning. In this study, we introduce a new task called unguided camera movement generation, in which a model autonomously plans and executes camera trajectories according to captured images. To enable research on this task, we (i) curate 99k real‑world camera trajectories via 3D reconstruction and quality filtering, (ii) release a simulation benchmark covering 38 natural landscape scenes and 7 photorealistic city scans, and (iii) propose metrics that jointly measure directing quality and motion smoothness. We further present a strong baseline for this new task named DVGFormer, which generates diverse and complex camera trajectories based on captured images. DVGFormer outperforms other baselines and demonstrates sophisticated behaviors such as obstacle-aware weaving, scenic reveals, and orbiting shots.
+                
+Camera drones offer unique perspectives and dynamic motions, yet automating their control for drone videography remains an open question. Unlike navigation or racing, there is no well-accepted reward function for human viewing experiences, making reinforcement learning approaches ill-suited. Therefore, we propose an imitation learning pipeline that learns from Internet videos by mimicking expert operations. In the absence of teleoperation data such as controller inputs and flight logs, we use reconstructed 3D camera poses to estimate camera drone trajectories. Importantly, to ensure data quality, we develop a scalable filtering scheme based on trajectory smoothness. After discarding more than three quarters of processed data, we produce 99k high-quality trajectories, making it the largest camera drone motion dataset. To evaluate this new task, we introduce an interactive evaluation environment with 38 natural scenes and 7 real city scans, and benchmark metrics at both the instance and dataset levels. As a minor contribution, we present a strong baseline named DVGFormer. Despite architectural simplicity, the proposed approach can reproduce complex cinematic behaviors such as obstacle‑aware weaving, scenic reveals, and orbiting shots, verifying the effectiveness of the proposed imitation learning formulation. Data and code are available.
               </p>
             </div>
           </div>
         </div>
 
+        <!-- contribution -->
+        <h3 class="title is-3">Contributions</h3>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/contribution.jpg" alt="Contribution overview.">
+          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">.</figcaption> -->
+        </figure>
+        Our contributions include 
+        <ol>
+          <li>an imitation learning formulation with a large-scale dataset of real-world camera drone trajectories,</li>
+          <li>an interactive evaluation environment with 38 natural scenes and 7 real city scans, plus a set of metrics that assess trajectory quality at both the instance and dataset levels,</li>
+          <li>and a strong baseline model named DVGFormer.</li>
+        </ol>
+
+        <br>
+
+
+
+        <!-- dataset -->
+        <h3 class="title is-3">DroneMotion-99k dataset</h3>
+        
+        <!-- <h5 class="title is-5">Key properties</h5>
+        
+
+        <ul>
+          <li><strong>Real-world Videos:</strong> Collected from 13,653 YouTube videos, the video clips offer a diverse range of camera drone movements.
+          </li>
+          <li><strong>Annotation Quality:</strong> From 1k human-labeled trajectories, we derive a threshold that best separates the correct and incorrect reconstructions (see Appendix), and filter out three-quarters of processed data.</li>
+          <li><strong>Dataset Scale:</strong> 99,003 high-quality 3D camera trajectories. Duration of 182.3 hours.</li>
+        </ul>
+        <br> -->
+
+        <h5 class="title is-5">Dataset Creation Pipeline</h5>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/data.jpg" alt="Dataset creation pipeline.">
+        </figure>
+        
+        <ul>
+          <li><strong>Video Collection:</strong> we downloaded 13,653 YouTube videos, and split them into 449,997 clips of individual scenes.
+          </li>
+          <li><strong>3D Reconstruction:</strong> we reconstructed 264,596 3D scenes from videos using COLMAP.</li>
+          <li><strong>Quality Filtering:</strong> we applied Kalman filter to 3D camera trajectories based on their smoothness, leaving us 99,003 data samples.</li>
+        </ul>
+
+        <br>
+
+
+        
+        <h5 class="title is-5">Example Video</h5>
+        <div class="video-wrapper">
+          <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+            <source src="./latex/figs/demo.mp4" type="video/mp4" />
+          </video>
+          <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+            <img src="./latex/figs/demo.jpg" alt="Example of camera drone trajectories in the DroneMotion-99k dataset.">
+          </figure>
+          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">
+        Example of camera drone trajectories in the DroneMotion-99k dataset.
+          </figcaption> -->
+        <br>
+
+        <h5 class="title is-5">Dataset Statistics</h5>
+        <figure class="image" style="margin: 0 auto; max-width: 500px;">
+          <img src="./latex/figs/data_stats.png" alt="Dataset statistics.">
+        </figure>
+        
+        <ul>
+          <li><strong>FPV Drones:</strong> for First-Person-View (FPV) drones, their motion features higher linear and angular speed, and a strong bias towards forward motion.
+          </li>
+          <li><strong>Non-FPV Drones:</strong> for Non-First-Person-View (Non-FPV) drones, their motion features lower linear and angular speed, usually with stationary or slow movements.</li>
+        </ul>
+
+        </div>
+        
+
+        <br>
+        
+        <!-- contribution -->
+        <h3 class="title is-3">Evaluation and Benchmarking</h3>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/interactive_eval.png" alt="Interactive evaluation and simulation scenes.">
+          <!-- <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">.</figcaption> -->
+        </figure>
+
+        <ul>
+          <li><strong>Interactive Evaluation Environment:</strong> different from previoua works that compare against ground-truth motions from existing videos (<span style="color: red;">predicted motions are not reflected</span>), our evaluation environment is interactive, where the camera drone motion directly influences future images.</li>
+          <li><strong>38 Natural Scenes and 7 Real City Scans:</strong> we collected 38 natural scenes from <a href="https://github.com/princeton-vl/infinigen" target="_blank">InfiniGen</a> and 7 real city scans from Google Earth.</li>
+          <li><strong>Metrics:</strong> human preference, crash rate, image-trajectory alignment, and diversity.</li>
+        </ul>
+
+        <br>
+
+
+        <!-- method -->
+        <h3 class="title is-3">DVGFormer Architecture</h3>
+        <figure class="image" style="margin: 0 auto; max-width: 1000px;">
+          <img src="./latex/figs/model.jpg" alt="DVGFormer architecture.">
+        </figure>
+        As a minor contribution, we prepare three different DVGFormer models for different prediction settings:
+        <ol>
+          <li><strong>DVGFormer-A:</strong> predicts the camera trajectory based on the initial image and previous camera poses.</li>
+          <li><strong>DVGFormer-B:</strong> predicts the camera trajectory based on all previous images.</li>
+          <li><strong>DVGFormer-C:</strong> predicts the camera trajectory based on previous images, camera poses, and motions.</li>
+        </ol>
+
+        <br>
+
+
+        <!-- results -->
+        <h3 class="title is-3">Results</h3>
+
+
+        <h5 class="title is-5">User Conditioning</h5>
+
+        Differences in <strong>drone type</strong> lead to different camera focal length and motion style.
+        <div style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
+        ">
+          <!-- Video 1 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./latex/figs/demo3dv3/00000_00401_fpv_paris_return10.00_crashNone_2025-05-05_22-15-55_config.txt_2025-10-11_03-33-35_online_plus.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">&lt;style&gt;=FPV</figcaption>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./latex/figs/demo3dv3/00000_10401_nonfpv_paris_return10.00_crashNone_2025-05-12_20-33-39_config.txt_2025-10-11_03-32-58_online_plus.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">&lt;style&gt;=non-FPV</figcaption>
+          </div>
+        </div>
+
+        <br>
+        
+        Differences in <strong>random noise</strong> conditioning lead to different camera drone trajectories.
+        <div style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
+        ">
+          <!-- Video 1 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./latex/figs/demo3dv3/00000_00007_fpv_himeji_return10.00_crashNone_2025-05-05_22-00-52_config.txt_2025-10-11_03-34-18_online_plus.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">&lt;cond&gt;=randn_1</figcaption>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./latex/figs/demo3dv3/00000_00007_fpv_himeji_return10.00_crashNone_2025-05-07_04-09-18_config.txt_2025-10-11_03-34-58_online_plus.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">&lt;cond&gt;=randn_2</figcaption>
+          </div>
+        </div>
+
+        <br>
+
+
 
         <!-- user extension -->
-        <h2 class="title is-4">Camera path extension from user input</h2>
+        <h5 class="title is-5">Camera path extension from user input</h5>
         <div style="
           margin: 0; 
           padding: 0; 
@@ -315,7 +577,7 @@
         </script>
 
         <p>
-          Given user input camera path, DVGFormer can smoothly extend its motion into
+          DVGFormer can smoothly extend <strong>given trajectory</strong> into
           longer sequence. See if you can spot the changes from the user input to the
           generated path by DVGFormer in video! 🤣
           <span style="color: red;">Scroll to zoom in and drag to change view.</span>
@@ -332,509 +594,70 @@
 
         <br>
 
+
+
+
+
+
+
         <!-- baseline comparison -->
 
-        <h2 class="title is-4">Comparison with baseline</h2>
+        <h5 class="title is-5">Comparison with existing methods</h5>
         <div style="
-          margin: 0; 
-          padding: 0; 
-          line-height: 0; 
-          display: grid; 
-          /* 2 columns: 1 'fraction' for video, 2 'fractions' for 3D */
-          grid-template-columns: 1fr 2fr;
-          /* 2 rows, one for each video+3D pair */
-          grid-template-rows: repeat(2, auto); 
-          gap: 3px;
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
         ">
           <!-- Video 1 -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
               <source src="./static/3d/himeji_rt1.mp4" type="video/mp4" />
             </video>
           </div>
-          <!-- 3D Viewer 3 -->
-          <div id="viewer3" class="viewer"></div>
 
           <!-- Video 2 -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
               <source src="./static/3d/himeji_dvgformer.mp4" type="video/mp4" />
             </video>
           </div>
-          <!-- 3D Viewer 2 -->
-          <div id="viewer4" class="viewer"></div>
-
         </div>
-        <script>
-          create3DViewer(
-            "viewer3",
-            "./static/3d/himeji_pointcloud.ply",      // path to pointcloud
-            "./static/3d/himeji_rt1_path.ply",  // path to mesh
-            [-267.742722, -248.496634, 95.270341],    // camera location
-            [-187.470686, -208.360616, 82.673410],    // camera target
-            30
-          );
 
-          create3DViewer(
-            "viewer4",
-            "./static/3d/himeji_pointcloud.ply",
-            "./static/3d/himeji_dvgformer_path.ply",
-            [-267.742722, -248.496634, 95.270341],
-            [-187.470686, -208.360616, 82.673410],
-            30
-          );
-        </script>
-
-        <p>
-          In contrast to the motion stuttering or sudden movements or direction changes in the 3D camera path generated
-          by the basline (<strong>top</strong>), DVGFormer (<strong>bottom</strong>) can produce a much smoother camera
-          path. See paper for more details.
-          <span style="color: red;">Scroll to zoom in and drag to change view.</span>
-        </p>
 
         <div style="
-          margin: 0; 
-          padding: 0; 
-          line-height: 0; 
-          display: grid; 
-          /* 2 columns: 1 'fraction' for video, 2 'fractions' for 3D */
-          grid-template-columns: 1fr 2fr;
-          /* 2 rows, one for each video+3D pair */
-          grid-template-rows: repeat(2, auto); 
-          gap: 3px;
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
         ">
           <!-- Video 1 -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
               <source src="./static/3d/snowy_mountains_rt1.mp4" type="video/mp4" />
             </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">
+              GenDoP (<a href="https://arxiv.org/abs/2504.07083">arXiv 2025</a>)
+            </figcaption>
           </div>
-          <!-- 3D Viewer 3 -->
-          <div id="viewer5" class="viewer"></div>
 
           <!-- Video 2 -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="">
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
               <source src="./static/3d/snowy_mountains_dvgformer.mp4" type="video/mp4" />
             </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">
+              DVGFormer (Ours)
+            </figcaption>
           </div>
-          <!-- 3D Viewer 2 -->
-          <div id="viewer6" class="viewer"></div>
-
         </div>
-        <script>
-          create3DViewer(
-            "viewer5",
-            "./static/3d/snowy_mountains_pointcloud.ply",      // path to pointcloud
-            "./static/3d/snowy_mountains_rt1_path.ply",  // path to mesh
-            [-267.742722, -248.496634, 95.270341],    // camera location
-            [-50.672150, -8.423536, 21.478352],    // camera target
-            20
-          );
-
-          create3DViewer(
-            "viewer6",
-            "./static/3d/snowy_mountains_pointcloud.ply",
-            "./static/3d/snowy_mountains_dvgformer_path.ply",
-            [-267.742722, -248.496634, 95.270341],
-            [-50.672150, -8.423536, 21.478352],
-            20
-          );
-        </script>
         <br>
 
 
-        <!-- more results -->
-        <h2 class="title is-4">
-          More results
-        </h2>
-        <div class="video-container"
-          style="margin: 0px; padding: 0px; line-height: 0px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px;">
-          <!-- real -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_rome_return10.00_crashNone_510_2024-12-07_04-07-24_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_himeji_return10.00_crashNone_6_2024-12-04_13-05-12_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_melbourne_return10.00_crashNone_210_2024-12-07_03-49-01_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_510_2024-12-04_13-51-07_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_509_2024-12-04_13-50-25_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_melbourne_return10.00_crashNone_202_2024-12-04_13-17-59_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_paris_return10.00_crashNone_401_2024-12-04_13-38-48_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <!-- <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_paris_return10.00_crashNone_410_2024-12-07_04-00-10_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div> -->
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_melbourne_return10.00_crashNone_204_2024-12-07_03-39-55_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_newyork_return10.00_crashNone_301_2024-12-04_13-33-55_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_506_2024-12-04_13-48-20_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_paris_return10.00_crashNone_404_2024-12-04_13-40-28_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_paris_return10.00_crashNone_410_2024-12-04_13-43-49_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_himeji_return10.00_crashNone_2_2024-12-07_03-18-46_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_501_2024-12-04_13-44-52_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_melbourne_return10.00_crashNone_205_2024-12-04_13-23-22_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_sydney_return10.00_crashNone_609_2024-12-04_13-56-08_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_505_2024-12-04_13-47-38_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_melbourne_return10.00_crashNone_202_2024-12-07_03-36-46_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_himeji_return10.00_crashNone_1_2024-12-04_13-00-50_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_rome_return10.00_crashNone_507_2024-12-04_13-49-02_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_melbourne_return10.00_crashNone_209_2024-12-04_13-30-36_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_paris_return10.00_crashNone_408_2024-12-07_03-59-04_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_newyork_return10.00_crashNone_307_2024-12-04_13-36-40_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_himeji_return10.00_crashNone_4_2024-12-07_03-20-22_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-blosm/fpv_paris_return10.00_crashNone_409_2024-12-04_13-43-15_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <!-- <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-blosm/nonfpv_melbourne_return10.00_crashNone_208_2024-12-07_03-46-06_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div> -->
-
-          <!-- synthetic -->
-
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_plain_1051ee9d_return10.00_crashNone_1401_2024-12-04_14-44-07_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_river_5d63fdb7_return10.00_crashNone_1503_2024-12-04_14-48-33_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_snowy_mountain_11d35d54_return10.00_crashNone_1601_2024-12-04_14-50-39_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_cliff_1af65998_return10.00_crashNone_1903_2024-12-04_15-02-17_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_coast_34d1b1e4_return10.00_crashNone_2001_2024-12-04_15-04-09_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_mountain_35cfa00e_return10.00_crashNone_2302_2024-12-04_15-15-38_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_plain_1a97a1e5_return10.00_crashNone_2401_2024-12-04_15-21-28_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_arctic_4f495b83_return10.00_crashNone_2701_2024-12-04_15-39-43_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_canyon_322e7b67_return10.00_crashNone_2802_2024-12-04_15-45-43_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_cliff_1b25e7c3_return10.00_crashNone_2901_2024-12-04_15-46-59_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_coast_7e6e5673_return10.00_crashNone_3001_2024-12-04_15-52-43_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_plain_23e26234_return10.00_crashNone_3401_2024-12-04_16-46-33_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_plain_23e26234_return10.00_crashNone_3403_2024-12-04_16-47-48_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_arctic_ab0d9c1_return10.00_crashNone_3703_2024-12-04_17-00-25_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-inifinigen/nonfpv_river_63e8def1_return10.00_crashNone_2502_2024-12-07_05-41-33_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_canyon_522e8568_return10.00_crashNone_3801_2024-12-04_17-02-13_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_canyon_522e8568_return10.00_crashNone_3803_2024-12-04_17-03-12_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_cliff_5d162e65_return10.00_crashNone_3901_2024-12-04_17-03-54_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_desert_6d828314_return10.00_crashNone_4001_2024-12-04_17-08-30_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-inifinigen/nonfpv_plain_1051ee9d_return10.00_crashNone_1402_2024-12-07_04-58-17_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-inifinigen/nonfpv_snowy_mountain_11d35d54_return10.00_crashNone_1602_2024-12-07_05-04-46_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_forest_67d8553d_return10.00_crashNone_4101_2024-12-04_17-10-19_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_snowy_mountain_763af71a_return10.00_crashNone_4401_2024-12-04_17-22-41_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_coast_21f9a55_return10.00_crashNone_1001_2024-12-04_14-10-43_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_desert_22e6c895_return10.00_crashNone_1102_2024-12-04_14-39-53_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-infinigen/fpv_cliff_12479289_return10.00_crashNone_901_2024-12-04_14-04-00_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video class="video" onclick="setAttribute('controls', 'true');" autoplay="" loop="" muted="">
-              <source
-                src="./static/videos/demo-nonfpv-inifinigen/nonfpv_canyon_322e7b67_return10.00_crashNone_2802_2024-12-07_05-54-16_online_plus.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <br>
 
       </div>
     </div>
