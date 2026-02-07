@@ -626,98 +626,59 @@ Camera drones offer unique perspectives and dynamic motions, yet automating thei
         <!-- baseline comparison -->
 
         <h5 class="title is-5">Comparison with existing methods</h5>
-        <p style="margin-bottom: 20px; text-align: center;">
-          Compared to existing methods (RT-1, GenDoP, DIRECTOR), DVGFormer-C generates more <strong>stable and smooth</strong> camera drone trajectories, eliminating the motion jitters and offering improved visual quality.
-        </p>
+        <div style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
+        ">
+          <!-- Video 1 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./static/3d/himeji_rt1.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-        <!-- Method labels on top -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px auto; max-width: 1400px;">
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">RT-1</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">GenDoP (<a href="https://arxiv.org/abs/2504.07083">arXiv 2025</a>)</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DIRECTOR (<a href="https://arxiv.org/abs/2312.08601">CVPR 2024</a>)</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DVGFormer-C (Ours)</div>
+          <!-- Video 2 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./static/3d/himeji_dvgformer.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
 
-        <script>
-          // Load selected videos from txt and generate comparison grids
-          document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('comparison-grid-container');
-            const methods = ['rt1', 'gendop', 'DIRECTOR', 'dvgformer-c'];
 
-            // Fetch and parse txt file
-            fetch('./static/videos/userstudy/selected_videos.txt')
-              .then(response => response.text())
-              .then(txtContent => {
-                const videoIds = txtContent.trim().split('\n')
-                  .map(id => id.trim())
-                  .filter(id => id.length > 0);
+        <div style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          max-width: 1200px;
+        ">
+          <!-- Video 1 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./static/3d/snowy_mountains_rt1.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">
+              GenDoP (<a href="https://arxiv.org/abs/2504.07083">arXiv 2025</a>)
+            </figcaption>
+          </div>
 
-                // Generate comparison rows for selected videos
-                videoIds.forEach(videoId => {
-                  const row = document.createElement('div');
-                  row.style.cssText = 'display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px auto; max-width: 1400px;';
-                  
-                  methods.forEach(method => {
-                    const videoWrapper = document.createElement('div');
-                    videoWrapper.style.cssText = 'text-align: center;';
-                    
-                    const videoElement = document.createElement('video');
-                    videoElement.className = 'video';
-                    videoElement.setAttribute('onclick', "setAttribute('controls','true');");
-                    videoElement.autoplay = true;
-                    videoElement.loop = true;
-                    videoElement.muted = true;
-                    videoElement.style.cssText = 'width: 100%; height: auto;';
-                    
-                    const source = document.createElement('source');
-                    source.src = `./static/videos/userstudy/${method}/${videoId}.mp4`;
-                    source.type = 'video/mp4';
-                    
-                    videoElement.appendChild(source);
-                    videoWrapper.appendChild(videoElement);
-                    row.appendChild(videoWrapper);
-                  });
-                  
-                  container.appendChild(row);
-                });
-              })
-              .catch(error => {
-                console.error('Error loading video selection:', error);
-                // Default to all videos if txt file not found
-                const allVideoIds = Array.from({length: 184}, (_, i) => String(i + 1).padStart(3, '0'));
-                
-                allVideoIds.forEach(videoId => {
-                  const row = document.createElement('div');
-                  row.style.cssText = 'display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px auto; max-width: 1400px;';
-                  
-                  methods.forEach(method => {
-                    const videoWrapper = document.createElement('div');
-                    videoWrapper.style.cssText = 'text-align: center;';
-                    
-                    const videoElement = document.createElement('video');
-                    videoElement.className = 'video';
-                    videoElement.setAttribute('onclick', "setAttribute('controls','true');");
-                    videoElement.autoplay = true;
-                    videoElement.loop = true;
-                    videoElement.muted = true;
-                    videoElement.style.cssText = 'width: 100%; height: auto;';
-                    
-                    const source = document.createElement('source');
-                    source.src = `./static/videos/userstudy/${method}/${videoId}.mp4`;
-                    source.type = 'video/mp4';
-                    
-                    videoElement.appendChild(source);
-                    videoWrapper.appendChild(videoElement);
-                    row.appendChild(videoWrapper);
-                  });
-                  
-                  container.appendChild(row);
-                });
-              });
-          });
-        </script>
-
-        <div id="comparison-grid-container"></div>
+          <!-- Video 2 -->
+          <div class="video-wrapper" style="flex: 1; max-width: 45%; text-align: center;">
+            <video class="video" onclick="setAttribute('controls','true');" autoplay="" loop="" muted="" style="width: 100%; height: auto;">
+              <source src="./static/3d/snowy_mountains_dvgformer.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="has-text-centered" style="margin-top: 6px; color: #555;">
+              DVGFormer (Ours)
+            </figcaption>
+          </div>
+        </div>
+        Compared to existing method (GenDoP, <a href="https://arxiv.org/abs/2504.07083">arXiv 2025</a>), DVGFormer generates more <strong>stable and smooth</strong> camera drone trajectories, eliminating the motion jitters and offering improved visual quality.
 
 
 
