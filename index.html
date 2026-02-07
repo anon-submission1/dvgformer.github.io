@@ -627,22 +627,22 @@ Camera drones offer unique perspectives and dynamic motions, yet automating thei
 
         <h5 class="title is-5">Comparison with existing methods</h5>
         <p style="margin-bottom: 20px; text-align: center;">
-          Compared to existing methods (RT-1, GenDoP, DIRECTOR), DVGFormer-C generates more <strong>stable and smooth</strong> camera drone trajectories, eliminating the motion jitters and offering improved visual quality.
+          Compared to existing methods (straight forward, RT-1, DIRECTOR), DVGFormer generates more <strong>diverse and smooth</strong> camera drone trajectories, eliminating the motion jitters and offering improved visual quality.
         </p>
 
         <!-- Method labels on top -->
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px auto; max-width: 1400px;">
+          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">straight forward</div>
           <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">RT-1</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">GenDoP (<a href="https://arxiv.org/abs/2504.07083">arXiv 2025</a>)</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DIRECTOR (<a href="https://arxiv.org/abs/2312.08601">CVPR 2024</a>)</div>
-          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DVGFormer-C (Ours)</div>
+          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DIRECTOR</div>
+          <div style="text-align: center; font-weight: bold; color: #555; padding: 10px 0;">DVGFormer (Ours)</div>
         </div>
 
         <script>
           // Load selected videos from txt and generate comparison grids
           document.addEventListener('DOMContentLoaded', function() {
             const container = document.getElementById('comparison-grid-container');
-            const methods = ['rt1', 'gendop', 'DIRECTOR', 'dvgformer-c'];
+            const methods = ['straight', 'rt1', 'DIRECTOR', 'dvgformer-c'];
 
             // Fetch and parse txt file
             fetch('./static/videos/userstudy/selected_videos.txt')
@@ -654,6 +654,12 @@ Camera drones offer unique perspectives and dynamic motions, yet automating thei
 
                 // Generate comparison rows for selected videos
                 videoIds.forEach(videoId => {
+                  // Add video ID label
+                  // const idLabel = document.createElement('div');
+                  // idLabel.textContent = `Video ID: ${videoId}`;
+                  // idLabel.style.cssText = 'text-align: center; font-weight: bold; color: #333; padding: 15px 0 5px 0; margin: 0 auto; max-width: 1400px;';
+                  // container.appendChild(idLabel);
+                  
                   const row = document.createElement('div');
                   row.style.cssText = 'display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px auto; max-width: 1400px;';
                   
